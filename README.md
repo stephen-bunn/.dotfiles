@@ -1,2 +1,2 @@
 # dotfiles
-Collection of my doltfiles managed by dotter
+My collection of dotfiles managed by [dotter](https://github.com/SuperCuber/dotter).
