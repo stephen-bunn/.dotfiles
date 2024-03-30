@@ -1,0 +1,62 @@
+# Dotter global configuration file
+# https://github.com/SuperCuber/dotter/wiki/Setup-and-Configuration
+
+[git.files]
+# https://git-scm.com/docs/git-config
+"git/gitconfig" = "~/.gitconfig"
+
+[fish]
+# https://fishshell.com/
+depends = ["dracula"]
+
+[fish.files]
+"fish/config.fish" = "~/.config/fish/config.fish"
+"fish/nnn.fish" = "~/.config/fish/nnn.fish"
+"fish/fzf.fish" = "~/.config/fish/fzf.fish"
+"fish/fish_plugins" = "~/.config/fish/fish_plugins"
+
+[alacritty]
+depends = ["dracula"]
+
+[alacritty.files]
+# https://alacritty.org/config-alacritty.html
+"alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
+"alacritty/dracula.toml" = "~/.config/alacritty/dracula.toml"
+
+[atuin.files]
+# https://docs.atuin.sh/configuration/config/
+"atuin/config.toml" = "~/.config/atuin/config.toml"
+
+[neovim.files]
+# https://neovim.io/doc/user/starting.html
+"neovim/init.vim" = "~/.config/nvim/init.vim"
+
+[bat.files]
+# https://github.com/sharkdp/bat
+"bat/config" = "~/.config/bat/config"
+
+[starship.files]
+# https://starship.rs/config/
+"starship/starship.toml" = "~/.config/starship.toml"
+
+[dracula.variables]
+# https://draculatheme.com/contribute
+dracula_background = "#282A36"
+dracula_current_line = "#44475A"
+dracula_foreground = "#F8F8F2"
+dracula_comment = "#6272A4"
+dracula_cyan = "#8BE9FD"
+dracula_bright_cyan = "#A4FFFF"
+dracula_green = "#50FA7B"
+dracula_bright_green = "#69FF94"
+dracula_orange = "#FFB86C"
+dracula_pink = "#FF79C6"
+dracula_bright_pink = "#FF92DF"
+dracula_purple = "#BD93F9"
+dracula_bright_purple = "#D6ACFF"
+dracula_red = "#FF5555"
+dracula_bright_red = "#FF6E6E"
+dracula_yellow = "#F1FA8C"
+dracula_bright_yellow = "#FFFFA5"
+dracula_black = "#21222c"
+dracula_white = "#FFFFFF"

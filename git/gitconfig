@@ -1,0 +1,25 @@
+[user]
+	name = Stephen Bunn
+	email = stephen@bunn.io
+	signingkey = EED5C84EB6884E240067A63D827787502AF66606
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	syntax-theme = Dracula
+	side-by-side = false
+	line-numbers = true
+	navigate = true
+	light = false
+[commit]
+	gpgsign = true
+	verbose = true
+[diff]
+	algorithm = histogram
+[merge]
+	conflictstyle = zdiff3
+[init]
+	defaultBranch = main
+[push]
+	autosetupremote = true

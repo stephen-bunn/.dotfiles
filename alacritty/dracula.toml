@@ -1,0 +1,76 @@
+# Dracula theme for Alacritty
+# https://draculatheme.com/alacritty
+#
+# Color palette
+# https://spec.draculatheme.com
+#
+# Instructions
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+
+[colors.primary]
+
+background = "{{dracula_background}}"
+foreground = "{{dracula_foreground}}"
+bright_foreground = "{{dracula_white}}"
+
+[colors.cursor]
+
+text = "{{dracula_background}}"
+cursor = "{{dracula_foreground}}"
+
+[colors.vi_mode_cursor]
+
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.selection]
+
+text = "CellForeground"
+background = "{{dracula_current_line}}"
+
+[colors.normal]
+
+black = "{{dracula_black}}"
+red = "{{dracula_red}}"
+green = "{{dracula_green}}"
+yellow = "{{dracula_yellow}}"
+blue = "{{dracula_purple}}"
+magenta = "{{dracula_pink}}"
+cyan = "{{dracula_cyan}}"
+white = "{{dracula_foreground}}"
+
+[colors.bright]
+
+black = "{{dracula_comment}}"
+red = "{{dracula_bright_red}}"
+green = "{{dracula_bright_green}}"
+yellow = "{{dracula_bright_yellow}}"
+blue = "{{dracula_bright_purple}}"
+magenta = "{{dracula_bright_pink}}"
+cyan = "{{dracula_bright_cyan}}"
+white = "{{dracula_white}}"
+
+[colors.search.matches]
+
+foreground = "{{dracula_current_line}}"
+background = "{{dracula_green}}"
+
+[colors.search.focused_match]
+
+foreground = "{{dracula_current_line}}"
+background = "{{dracula_orange}}"
+
+[colors.footer_bar]
+
+background = "{{dracula_background}}"
+foreground = "{{dracula_foreground}}"
+
+[colors.hints.start]
+
+foreground = "{{dracula_background}}"
+background = "{{dracula_yellow}}"
+
+[colors.hints.end]
+
+foreground = "{{dracula_yellow}}"
+background = "{{dracula_background}}"

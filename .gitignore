@@ -1,0 +1,4 @@
+# Contains local configuration for the dotter tool, do not sync to Git repository
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache/
