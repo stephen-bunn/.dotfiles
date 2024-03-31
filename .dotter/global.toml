@@ -39,6 +39,11 @@ depends = ["dracula"]
 # https://starship.rs/config/
 "starship/starship.toml" = "~/.config/starship.toml"
 
+[hammerspoon.files]
+# https://www.hammerspoon.org/docs/
+"hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
+"hammerspoon/alacritty.lua" = "~/.hammerspoon/alacritty.lua"
+
 [dracula.variables]
 # https://draculatheme.com/contribute
 dracula_background = "#282A36"
