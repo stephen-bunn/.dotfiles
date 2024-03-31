@@ -42,7 +42,11 @@ depends = ["dracula"]
 [hammerspoon.files]
 # https://www.hammerspoon.org/docs/
 "hammerspoon/init.lua" = "~/.hammerspoon/init.lua"
-"hammerspoon/alacritty.lua" = "~/.hammerspoon/alacritty.lua"
+"hammerspoon/alacritty.lua" = { target = "~/.hammerspoon/alacritty.lua", type = "symbolic", if = "dotter.packages.alacritty" }
+
+[just.files]
+# https://just.systems/man/en/
+"just/.justfile" = "~/.justfile"
 
 [dracula.variables]
 # https://draculatheme.com/contribute
