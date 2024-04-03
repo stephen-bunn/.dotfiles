@@ -4,6 +4,8 @@ local spaces = require('hs.spaces')
 
 local ALACRITTY_NAME = 'Alacritty'
 local ALACRITTY_SELECTOR = 'org.alacritty'
+local ALACRITTY_TOGGLE_KEY = '.'
+local ALACRITTY_TOGGLE_KEY_MODIFIERS = {'alt'}
 local ALACRITTY_TOGGLE_FULLSCREEN_KEYBIND = {'cmd', 'return'}
 
 -- Configuration options for the Alacritty script
@@ -97,7 +99,7 @@ function toggleAlacritty()
 end
 
 -- Bind toggling the Alacritty application
-hs.hotkey.bind({"alt"}, ".", toggleAlacritty)
+hs.hotkey.bind(ALACRITTY_TOGGLE_KEY_MODIFIERS, ALACRITTY_TOGGLE_KEY, toggleAlacritty)
 
 -- Subscribe to events in order to hide the Alacritty application if focus is lost
 if CONFIG['HIDE_ON_FOCUS_LOST'] then
