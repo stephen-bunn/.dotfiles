@@ -23,5 +23,3 @@
 	defaultBranch = main
 [push]
 	autosetupremote = true
-[gpg]
-	program = /opt/homebrew/bin/gpg
