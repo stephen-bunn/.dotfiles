@@ -37,3 +37,4 @@ update:
   @just update-nvim
 
 alias up := update
+

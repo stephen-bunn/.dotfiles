@@ -7,7 +7,7 @@ set -gx PATH /opt/homebrew/bin /opt/homebrew/sbin $HOME/.local/bin $HOME/.cargo/
 
 abbr gcs "git commit -sv"
 abbr gpb "git branch --merged | grep -Ev 'main|master' | xargs -r git branch -d"
-abbr ghcs "gh copilot suggest"
+abbr ghcs "gh copilot suggest -t shell"
 abbr ghce "gh copilot explain"
 
 alias c cat
