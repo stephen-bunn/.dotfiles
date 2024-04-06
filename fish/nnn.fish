@@ -5,6 +5,8 @@ alias nnn="nnn -e"
 set --export NNN_FIFO "/tmp/nnn.fifo"
 set --export NNN_TMPFILE "$HOME/.config/nnn/.lastd"
 
+# Function: n
+# Description: This function wraps the 'nnn' command and is used to change the directory when 'nnn' quits.
 function n --wraps nnn --description 'change directory on nnn quit'
     if test -n "$NNNLVL"
         if [ (expr $NNNLVL + 0) -ge 1 ]
