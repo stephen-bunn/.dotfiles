@@ -10,7 +10,6 @@ abbr gpb "git branch --merged | grep -Ev 'main|master' | xargs -r git branch -d"
 abbr ghcs "gh copilot suggest -t shell"
 abbr ghce "gh copilot explain"
 
-alias c cat
 alias cat bat
 alias top btop
 alias v nvim
