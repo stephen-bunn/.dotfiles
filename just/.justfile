@@ -28,6 +28,11 @@ update-vscode:
   @echo "Updating vscode extensions..."
   @code --update-extensions
 
+# Update GitHub CLI
+update-gh:
+  @echo "Updating gh extensions..."
+  @gh extensions upgrade --all >/dev/null
+
 # Update system dependencies
 update:
   @just update-homebrew
@@ -35,6 +40,7 @@ update:
   @just update-tmux
   @just update-fish
   @just update-nvim
+  @just update-gh
 
 alias up := update
 
