@@ -22,6 +22,7 @@ alias dy 'dig +short $argv @dns.toys'
 
 source $HOME/.config/fish/nnn.fish
 source $HOME/.config/fish/fzf.fish
+source $HOME/.cargo/env.fish
 
 starship init fish | source
 atuin init fish --disable-up-arrow | source
