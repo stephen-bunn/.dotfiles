@@ -15,6 +15,9 @@ local CONFIG = {
   HIDE_ON_FOCUS_LOST = false,
 }
 
+-- Global storage for the last acitvated application
+local LAST_ACTIVATED_APP = nil
+
 -- Handle triggering the Alacritty application's fullscreen keybind
 --
 -- @param app The Alacritty application
@@ -75,7 +78,11 @@ function toggleAlacritty()
   if alacritty ~= nil and alacritty:isFrontmost() then
     -- If Alacritty is running and is the frontmost application, hide it
     alacritty:hide()
+    if LAST_ACTIVATED_APP ~= nil then
+      LAST_ACTIVATED_APP:activate()
+    end
   else
+    LAST_ACTIVATED_APP = hs.application.frontmostApplication()
     local focusedSpace = spaces.focusedSpace()
     local mainScreen = hs.screen.find(spaces.spaceDisplay(focusedSpace))
 
