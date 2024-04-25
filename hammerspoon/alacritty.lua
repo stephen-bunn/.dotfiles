@@ -7,6 +7,7 @@ local ALACRITTY_SELECTOR = 'org.alacritty'
 local ALACRITTY_TOGGLE_KEY = '.'
 local ALACRITTY_TOGGLE_KEY_MODIFIERS = {'alt'}
 local ALACRITTY_TOGGLE_FULLSCREEN_KEYBIND = {'cmd', 'return'}
+local ALACRITTY_REFOCUS_LAST_ACTIVATED_APP = true
 
 -- Configuration options for the Alacritty script
 local CONFIG = {
@@ -78,11 +79,16 @@ function toggleAlacritty()
   if alacritty ~= nil and alacritty:isFrontmost() then
     -- If Alacritty is running and is the frontmost application, hide it
     alacritty:hide()
-    if LAST_ACTIVATED_APP ~= nil then
-      LAST_ACTIVATED_APP:activate()
+    if ALACRITTY_REFOCUS_LAST_ACTIVATED_APP and LAST_ACTIVATED_APP ~= nil then
+      if LAST_ACTIVATED_APP:isRunning() then
+        LAST_ACTIVATED_APP:activate()
+      end
+      LAST_ACTIVATED_APP = nil
     end
   else
-    LAST_ACTIVATED_APP = hs.application.frontmostApplication()
+    if ALACRITTY_REFOCUS_LAST_ACTIVATED_APP then
+      LAST_ACTIVATED_APP = hs.application.frontmostApplication()
+    end
     local focusedSpace = spaces.focusedSpace()
     local mainScreen = hs.screen.find(spaces.spaceDisplay(focusedSpace))
 
