@@ -23,6 +23,7 @@ source $HOME/.config/fish/nnn.fish
 source $HOME/.config/fish/fzf.fish
 source $HOME/.cargo/env.fish
 
+fzf --fish | source
 starship init fish | source
 atuin init fish --disable-up-arrow | source
 zoxide init fish | source
