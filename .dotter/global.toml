@@ -29,7 +29,7 @@ depends = ["dracula"]
 
 [neovim.files]
 # https://neovim.io/doc/user/starting.html
-"neovim/init.vim" = "~/.config/nvim/init.vim"
+"nvim" = "~/.config/nvim"
 
 [bat.files]
 # https://github.com/sharkdp/bat

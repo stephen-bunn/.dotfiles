@@ -1,12 +1,12 @@
 -- Hammerspoon Spaces Management Library
 -- https://github.com/asmagill/hs._asm.spaces
-local spaces = require('hs.spaces')
+local spaces = require("hs.spaces")
 
-local ALACRITTY_NAME = 'Alacritty'
-local ALACRITTY_SELECTOR = 'org.alacritty'
-local ALACRITTY_TOGGLE_KEY = '.'
-local ALACRITTY_TOGGLE_KEY_MODIFIERS = {'alt'}
-local ALACRITTY_TOGGLE_FULLSCREEN_KEYBIND = {'cmd', 'return'}
+local ALACRITTY_NAME = "Alacritty"
+local ALACRITTY_SELECTOR = "org.alacritty"
+local ALACRITTY_TOGGLE_KEY = "."
+local ALACRITTY_TOGGLE_KEY_MODIFIERS = { "alt" }
+local ALACRITTY_TOGGLE_FULLSCREEN_KEYBIND = { "cmd", "return" }
 local ALACRITTY_REFOCUS_LAST_ACTIVATED_APP = true
 
 -- Configuration options for the Alacritty script
@@ -34,8 +34,8 @@ end
 -- @param widthScale The desired width scaling factor for the application
 -- @param heightScale The desired height scaling factor for the application
 function moveAlacritty(app, space, screen, widthScale, heightScale)
-  widthScale = widthScale or CONFIG['WIDTH_SCALE']
-  heightScale = heightScale or CONFIG['HEIGHT_SCALE']
+  widthScale = widthScale or CONFIG["WIDTH_SCALE"]
+  heightScale = heightScale or CONFIG["HEIGHT_SCALE"]
 
   -- Discover the provided application's main window
   -- Note the while-loop as calls to `mainWindow` could return `nil`
@@ -95,7 +95,7 @@ function toggleAlacritty()
     -- If Alacritty is not running, attempt to launch the application
     if alacritty == nil and hs.application.launchOrFocus(ALACRITTY_NAME) then
       local appWatcher = nil
-      appWatcher = hs.application.watcher.new(function (name, event, app)
+      appWatcher = hs.application.watcher.new(function(name, event, app)
         if event == hs.application.watcher.launched and name == ALACRITTY_NAME then
           app:hide()
           moveAlacritty(app, focusedSpace, mainScreen)
@@ -115,7 +115,7 @@ end
 hs.hotkey.bind(ALACRITTY_TOGGLE_KEY_MODIFIERS, ALACRITTY_TOGGLE_KEY, toggleAlacritty)
 
 -- Subscribe to events in order to hide the Alacritty application if focus is lost
-if CONFIG['HIDE_ON_FOCUS_LOST'] then
+if CONFIG["HIDE_ON_FOCUS_LOST"] then
   hs.window.filter.default:subscribe(hs.window.filter.windowUnfocused, function(window, app)
     local alacritty = hs.application.get(ALACRITTY_SELECTOR)
     if alacritty ~= nil then
