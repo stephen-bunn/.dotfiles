@@ -15,13 +15,10 @@ depends = ["dracula"]
 "fish/fzf.fish" = "~/.config/fish/fzf.fish"
 "fish/fish_plugins" = "~/.config/fish/fish_plugins"
 
-[alacritty]
-depends = ["dracula"]
-
 [alacritty.files]
 # https://alacritty.org/config-alacritty.html
 "alacritty/alacritty.toml" = "~/.config/alacritty/alacritty.toml"
-"alacritty/dracula.toml" = "~/.config/alacritty/dracula.toml"
+"alacritty/catppuccin-frappe.toml" = "~/.config/alacritty/catppuccin-frappe.toml"
 
 [atuin.files]
 # https://docs.atuin.sh/configuration/config/
@@ -47,6 +44,10 @@ depends = ["dracula"]
 [just.files]
 # https://just.systems/man/en/
 "just/.justfile" = "~/.justfile"
+
+[tmux.files]
+# https://github.com/tmux/tmux/wiki/Getting-Started
+"tmux/.tmux.conf" = "~/.tmux.conf"
 
 [dracula.variables]
 # https://draculatheme.com/contribute

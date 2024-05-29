@@ -7,11 +7,6 @@ update-fish:
   echo "Updating fish plugins..."
   fisher update 2>&1 >/dev/null
 
-# Update Neovim
-update-nvim:
-  @echo "Updating neovim plugins..."
-  @nvim +PlugUpdate +quit +quit
-
 # Update Homebrew dependencies
 update-homebrew:
   @echo "Updating system dependencies..."
@@ -39,7 +34,6 @@ update:
   @just update-vscode
   @just update-tmux
   @just update-fish
-  @just update-nvim
   @just update-gh
 
 alias up := update
