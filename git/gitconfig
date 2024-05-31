@@ -1,3 +1,5 @@
+[include]
+  path = ~/.config/delta/catppuccin.gitconfig
 [user]
 	name = Stephen Bunn
 	email = stephen@bunn.io
@@ -7,7 +9,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [delta]
-	syntax-theme = Dracula
+  features = catppuccin-frappe
 	side-by-side = false
 	line-numbers = true
 	navigate = true

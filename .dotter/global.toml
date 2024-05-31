@@ -32,6 +32,10 @@ depends = ["dracula"]
 # https://github.com/sharkdp/bat
 "bat/config" = "~/.config/bat/config"
 
+[delta.files]
+# https://dandavison.github.io/delta/
+"delta" = "~/.config/delta"
+
 [starship.files]
 # https://starship.rs/config/
 "starship/starship.toml" = "~/.config/starship.toml"
