@@ -56,3 +56,7 @@
 # https://github.com/tmux/tmux/wiki/Getting-Started
 "tmux/.tmux.conf" = "~/.tmux.conf"
 
+[btop.files]
+# https://github.com/aristocratos/btop
+"btop" = "~/.config/btop"
+
